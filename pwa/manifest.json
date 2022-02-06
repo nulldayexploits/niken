@@ -1,0 +1,190 @@
+{
+    "dir": "ltr",
+    "lang": "en-us",
+    "name": "Lapor Bawaslu App",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "/",
+    "short_name": "Lapor Bawaslu App",
+    "description": "Layanan Pelaporan Kecurangan Pemilu",
+    "orientation": "any",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/pwa/icons/android/android-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/android/android-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/android/android-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/android/android-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/android/android-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/android/android-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/android/android-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/android/android-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/android/android-icon-512x512.png",
+            "sizes": "512x512"
+        },
+
+        {
+            "src": "/pwa/icons/chrome/chrome-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/chrome/chrome-icon-512x512.png",
+            "sizes": "512x512"
+        },
+
+        {
+            "src": "/pwa/icons/firefox/firefox-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/firefox/firefox-icon-512x512.png",
+            "sizes": "512x512"
+        },
+
+        {
+            "src": "/pwa/icons/ios/ios-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/ios/ios-icon-512x512.png",
+            "sizes": "512x512"
+        },
+
+        {
+            "src": "/pwa/icons/windows/windows-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/windows/windows-icon-512x512.png",
+            "sizes": "512x512"
+        },
+
+        {
+            "src": "/pwa/icons/windows 10/windows 10-icon-48x48.png",
+            "sizes": "48x48"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-72x72.png",
+            "sizes": "72x72"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-96x96.png",
+            "sizes": "96x96"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-128x128.png",
+            "sizes": "128x128"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-144x144.png",
+            "sizes": "144x144"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-152x152.png",
+            "sizes": "152x152"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-192x192.png",
+            "sizes": "192x192"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-384x384.png",
+            "sizes": "384x384"
+        },{
+            "src": "/pwa/icons/windows 10/windows 10-icon-512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

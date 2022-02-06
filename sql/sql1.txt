@@ -1,0 +1,84 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.3.13-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for 21_pwa_bawaslu
+CREATE DATABASE IF NOT EXISTS `21_pwa_bawaslu` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `21_pwa_bawaslu`;
+
+-- Dumping structure for table 21_pwa_bawaslu.tb_jenis_pelanggaran
+CREATE TABLE IF NOT EXISTS `tb_jenis_pelanggaran` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `jenis_pelanggaran` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 21_pwa_bawaslu.tb_jenis_pelanggaran: ~2 rows (approximately)
+/*!40000 ALTER TABLE `tb_jenis_pelanggaran` DISABLE KEYS */;
+INSERT INTO `tb_jenis_pelanggaran` (`id`, `jenis_pelanggaran`) VALUES
+	(1, 'PASAL 2 AYAT 4 - Pelanggaran Berat Pemilu');
+/*!40000 ALTER TABLE `tb_jenis_pelanggaran` ENABLE KEYS */;
+
+-- Dumping structure for table 21_pwa_bawaslu.tb_laporan
+CREATE TABLE IF NOT EXISTS `tb_laporan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) DEFAULT NULL,
+  `nomor_identitas` varchar(50) DEFAULT NULL,
+  `tempat_tgl_lahir` varchar(250) DEFAULT NULL,
+  `jenis_kelamin` char(50) DEFAULT NULL,
+  `pekerjaan_or_jabatan` varchar(250) DEFAULT NULL,
+  `kewarganegaraan` char(50) DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `peristiwa` varchar(250) DEFAULT NULL,
+  `tempat_kejadian` varchar(250) DEFAULT NULL,
+  `waktu` time DEFAULT NULL,
+  `hari_tgl` varchar(250) DEFAULT NULL,
+  `terlapor` varchar(250) DEFAULT NULL,
+  `alamat_terlapor` varchar(250) DEFAULT NULL,
+  `saksi_1_nama` varchar(250) DEFAULT NULL,
+  `saksi_1_no_telp` varchar(250) DEFAULT NULL,
+  `saksi_2_nama` varchar(250) DEFAULT NULL,
+  `saksi_2_no_telp` varchar(250) DEFAULT NULL,
+  `bukti` text DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `jenis_pelanggaran` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 21_pwa_bawaslu.tb_laporan: ~2 rows (approximately)
+/*!40000 ALTER TABLE `tb_laporan` DISABLE KEYS */;
+INSERT INTO `tb_laporan` (`id`, `nama`, `nomor_identitas`, `tempat_tgl_lahir`, `jenis_kelamin`, `pekerjaan_or_jabatan`, `kewarganegaraan`, `alamat`, `peristiwa`, `tempat_kejadian`, `waktu`, `hari_tgl`, `terlapor`, `alamat_terlapor`, `saksi_1_nama`, `saksi_1_no_telp`, `saksi_2_nama`, `saksi_2_no_telp`, `bukti`, `status`, `jenis_pelanggaran`) VALUES
+	(3, 'Awlia', '123', 'Makassar, 23 Oktober 1987', 'Laki-Laki', 'Wirausaha', 'Indonesia', 'Btn andi tonro Permai', 'Serangan Fajar', 'Kantor Desa ABC', '23:25:00', 'Senin, 7 Januari 2022', 'Si Fulan', 'Btn andi tonro Permai', 'Si Fulan 1', '456', 'Si Fulan 2', '789', 'admin/berkas/04 akta kelahiran.pdf', 'BELUM DIPROSES', NULL),
+	(5, 'Niken', '1234567890', 'Makassar, 23 Oktober 2004', 'Perempuan', 'Wirausaha', 'Indonesia', 'Jalan Sahabat', 'Politik Uang', 'Kantor Desa ABC', '00:17:00', 'Senin, 7 Januari 2022', 'Si Fulan', 'Btn Cempaka Putih', 'Si Fulan 1', '456', 'Si Fulan 2', '789', 'admin/berkas/BAB IV.pdf', 'SELESAI DITETAPKAN SEBAGAI PELANGGARAN PASAL 2 AYA', 'PASAL 2 AYAT 4 - Pelanggaran Berat Pemilu');
+/*!40000 ALTER TABLE `tb_laporan` ENABLE KEYS */;
+
+-- Dumping structure for table 21_pwa_bawaslu.tb_user
+CREATE TABLE IF NOT EXISTS `tb_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_lengkap` varchar(250) NOT NULL,
+  `hak_akses` varchar(250) NOT NULL DEFAULT 'USER',
+  `username` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 21_pwa_bawaslu.tb_user: ~2 rows (approximately)
+/*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
+INSERT INTO `tb_user` (`id`, `nama_lengkap`, `hak_akses`, `username`, `password`) VALUES
+	(1, 'Admin', 'ADMIN', 'admin', '202cb962ac59075b964b07152d234b70'),
+	(5, 'Pengawas', 'PENGAWAS', 'pengawas', '202cb962ac59075b964b07152d234b70');
+/*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
