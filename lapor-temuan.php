@@ -7,7 +7,7 @@
     <main>
       <div class="container">
         <div class="form"> 
-          <h5 id="lap-kec" class="mt-4 mb-3"><u>Lapor Kecurangan (B.1)</u></h5>
+          <h5 id="lap-kec" class="mt-4 mb-3"><u>Lapor Temuan (B.2)</u></h5>
           
           Data Pelapor
           <div class="mb-3">
@@ -149,7 +149,7 @@ if(isset($_POST['Submit'])) {
   // Memasukkan data kedatabase berdasarakan variabel tadi
   $result = mysqli_query($mysqli, "INSERT INTO tb_laporan 
                                   (id, nama, nomor_identitas, tempat_tgl_lahir, jenis_kelamin, pekerjaan_or_jabatan, kewarganegaraan, alamat, peristiwa, tempat_kejadian, waktu, hari_tgl, terlapor, alamat_terlapor, saksi_1_nama, saksi_1_no_telp, saksi_2_nama, saksi_2_no_telp, bukti, status, jenis_laporan, asal_laporan) 
-                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'LAPORAN (B.1)', '$profile')");
+                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'TEMUAN (B.2)', '$profile')");
   
   // Cek jika proses simpan ke database sukses atau tidak   
   if($result){ 

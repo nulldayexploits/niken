@@ -5,12 +5,13 @@
   include('config/base-url.php');  
 
 	 
-	  $id = $_GET['id'];
+    $id = $_GET['id'];
+	  $q  = $_GET['q'];
 
-    $delete = mysqli_query($mysqli, "UPDATE tb_laporan set status = 'SEDANG DIPROSES' WHERE id = '$id' ");
+    $delete = mysqli_query($mysqli, "UPDATE tb_laporan set status = '$q' WHERE id = '$id' ");
 
 	if($delete){		 
-     echo '<script language="javascript"> alert("Berhasil Dipindahkan Ke Tahap Proses!"); window.location.href = "'.$base_url_back.'/view_proses_laporan.php" </script>';
+     echo '<script language="javascript"> alert("Berhasil Mengubah Proses!"); window.location.href = "'.$base_url_back.'/'.$_GET['redto'].'.php" </script>';
     }else{
     	echo mysqli_error($mysqli);
     }

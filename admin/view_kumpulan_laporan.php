@@ -15,14 +15,14 @@
                 <th>Tanggal Dan Waktu</th>
                 <th>Pelapor</th>
                 <th>Status</th>
-                <th>Action</th>
+                <th>Action</th> 
               </tr>
             </thead>
             <tbody>
               
               <?php
                 $no = 1;
-                $result = mysqli_query($mysqli, "SELECT * FROM tb_laporan WHERE status = 'SEDANG DIPROSES'");
+                $result = mysqli_query($mysqli, "SELECT * FROM tb_laporan WHERE status = 'SEDANG DIPROSES' OR status = 'DISIDANGKAN'");
                 while($data = mysqli_fetch_array($result)) { 
               ?>
               <tr>
@@ -33,7 +33,12 @@
                 <td><?php echo $data['status']; ?></td>
                 <td>
                   <a href="../<?php echo $data['bukti']; ?>" target="_blank" class="btn btn-success mb-1">Lihat Bukti</a>
-                  <a href="selesai_laporan.php?id=<?php echo $data['id']; ?>" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin Menetapkan Pelanggaran Pada Laporan Ini?');">Selesai</a>
+                  <?php if($data['status'] == "SEDANG DIPROSES"){ ?>
+                  <a href="proses_laporan.php?id=<?php echo $data['id']; ?>&q=DISIDANGKAN&redto=view_kumpulan_laporan" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin Menetapkan Untuk Disidangkan?');">Disidangkan</a>
+                  <?php } ?>
+                  <?php if($data['status'] == "DISIDANGKAN"){ ?>
+                  <a href="selesai_laporan.php?id=<?php echo $data['id']; ?>&q=DISIDANGKAN&redto=view_kumpulan_laporan" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin Menetapkan Pelanggaran Ini?');">Penetapan Pelanggaran</a>
+                  <?php } ?>
                 </td>
               </tr>
               <?php $no++; } ?>

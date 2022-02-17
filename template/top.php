@@ -1,3 +1,4 @@
+<?php include '../profile.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +34,16 @@
 
       <a href="lapor-kecurangan.php">
         <li href="lapor-kecurangan.php" class="nav-link text-white">
-          <span class="mx-2">Lapor Kecurangan</span>
+          <span class="mx-2">Lapor Kecurangan (B1)</span>
         </li>
       </a>
       
+      <a href="lapor-temuan.php">
+        <li href="lapor-temuan.php" class="nav-link text-white">
+          <span class="mx-2">Lapor Temuan (B2)</span>
+        </li>
+      </a>
+
       <a href="tracking-laporan.php">
         <li href="tracking-laporan.php" class="nav-link text-white">
           <span class="mx-2">Tracking Laporan</span>
