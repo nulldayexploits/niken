@@ -20,6 +20,7 @@ include '../admin/config/base-url.php';
             "peristiwa"=>$data["peristiwa"],
             "hari_tgl"=>$data["hari_tgl"].' Jam '.$data['waktu'],
             "identitas"=>$data['nama'].' <br>No Identitas: '.$data['nomor_identitas'],
+            "asal_laporan"=>'<b>Prov:</b>'.$data["asal_laporan_prov"].'<br><b>Kab/Kota:</b>'.$data["asal_laporan_kabkota"].'<br><b>Kec:</b>'.$data["asal_laporan_kec"].'<br><b>Desa/Kelurahan:</b>'.$data["asal_laporan_desa"],
             "status"=>$data["status"]
           ];
   

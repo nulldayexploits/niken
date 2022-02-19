@@ -57,7 +57,7 @@ if(isset($_POST['Submit'])) {
                 <td><center><?php echo $no; ?>.</td>
                 <td><?php echo $data['peristiwa']; ?></td>
                 <td><?php echo $data['hari_tgl']; ?> Jam <?php echo $data['waktu']; ?></td>
-                <td><?php echo $data['nama']; ?><br>No Identitas: <b><?php echo $data['nomor_identitas']; ?></b></td>
+                <td><?php echo $data['nama']; ?><br>No Identitas: <b><?php echo $data['nomor_identitas']; ?></b><br>Asal Laporan: <?php echo $data['asal_laporan']; ?></td>
                 <td><?php echo $data['status']; ?></td>
               </tr>
               <?php $no++; } ?>

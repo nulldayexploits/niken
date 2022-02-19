@@ -32,18 +32,12 @@
       
       
 
-      <a href="lapor-kecurangan.php">
-        <li href="lapor-kecurangan.php" class="nav-link text-white">
-          <span class="mx-2">Lapor Kecurangan (B1)</span>
+      <a href="lapor.php">
+        <li href="lapor.php" class="nav-link text-white">
+          <span class="mx-2">Pelaporan Dugaan <br><span style="padding-left:7px;">Pelanggaran Pemilu</span></span>
         </li>
       </a>
       
-      <a href="lapor-temuan.php">
-        <li href="lapor-temuan.php" class="nav-link text-white">
-          <span class="mx-2">Lapor Temuan (B2)</span>
-        </li>
-      </a>
-
       <a href="tracking-laporan.php">
         <li href="tracking-laporan.php" class="nav-link text-white">
           <span class="mx-2">Tracking Laporan</span>

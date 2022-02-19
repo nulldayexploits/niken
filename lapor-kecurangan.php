@@ -7,8 +7,24 @@
     <main>
       <div class="container">
         <div class="form"> 
-          <h5 id="lap-kec" class="mt-4 mb-3"><u>Lapor Kecurangan (B.1)</u></h5>
+          <h5 id="lap-kec" class="mt-4 mb-3"><u>Penerimaan Laporan <br>(Formulir B.1)</u></h5>
           
+          Data Asal Kejadian
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Provinsi" value="<?php echo $profile; ?>" readonly>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="asal_laporan_kabkota" placeholder="Kabupaten/Kota">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="asal_laporan_kec" placeholder="Kecamatan">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="asal_laporan_desa" placeholder="Desa/Kelurahan">
+          </div>
+          
+          <br> 
+
           Data Pelapor
           <div class="mb-3">
             <input type="text" class="form-control" name="nama" placeholder="Nama Pelapor">
@@ -139,6 +155,10 @@ if(isset($_POST['Submit'])) {
   $berkas1              = $_FILES['bukti']['name'];
   $tmp_berkas1          = $_FILES['bukti']['tmp_name'];
   $bukti                = "admin/berkas/".$berkas1;
+
+  $asal_laporan_kabkota = $_POST['asal_laporan_kabkota'];
+  $asal_laporan_kec     = $_POST['asal_laporan_kec'];
+  $asal_laporan_desa    = $_POST['asal_laporan_desa'];
   
   if (move_uploaded_file($tmp_berkas1, $bukti)) {
     $bukti = $bukti;
@@ -148,8 +168,8 @@ if(isset($_POST['Submit'])) {
 
   // Memasukkan data kedatabase berdasarakan variabel tadi
   $result = mysqli_query($mysqli, "INSERT INTO tb_laporan 
-                                  (id, nama, nomor_identitas, tempat_tgl_lahir, jenis_kelamin, pekerjaan_or_jabatan, kewarganegaraan, alamat, peristiwa, tempat_kejadian, waktu, hari_tgl, terlapor, alamat_terlapor, saksi_1_nama, saksi_1_no_telp, saksi_2_nama, saksi_2_no_telp, bukti, status, jenis_laporan, asal_laporan) 
-                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'LAPORAN (B.1)', '$profile')");
+                                  (id, nama, nomor_identitas, tempat_tgl_lahir, jenis_kelamin, pekerjaan_or_jabatan, kewarganegaraan, alamat, peristiwa, tempat_kejadian, waktu, hari_tgl, terlapor, alamat_terlapor, saksi_1_nama, saksi_1_no_telp, saksi_2_nama, saksi_2_no_telp, bukti, status, jenis_laporan, asal_laporan_prov, asal_laporan_kabkota, asal_laporan_kec, asal_laporan_desa) 
+                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'LAPORAN (B.1)', '$profile', '$asal_laporan_kabkota', '$asal_laporan_kec', '$asal_laporan_desa')");
   
   // Cek jika proses simpan ke database sukses atau tidak   
   if($result){ 

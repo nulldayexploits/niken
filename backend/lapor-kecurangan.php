@@ -30,7 +30,10 @@ include '../admin/config/base-url.php';
   $saksi_2_nama         = $_POST['saksi_2_nama'];
   $saksi_2_no_telp      = $_POST['saksi_2_no_telp'];
 
-  $asal_laporan         = $_POST['asal_laporan'];
+  $asal_laporan_prov    = $_POST['asal_laporan_prov'];
+  $asal_laporan_kabkota = $_POST['asal_laporan_kabkota'];
+  $asal_laporan_kec     = $_POST['asal_laporan_kec'];
+  $asal_laporan_desa    = $_POST['asal_laporan_desa'];
 
   $berkas1              = $_FILES['bukti']['name'];
   $tmp_berkas1          = $_FILES['bukti']['tmp_name'];
@@ -44,8 +47,8 @@ include '../admin/config/base-url.php';
 
   // Memasukkan data kedatabase berdasarakan variabel tadi
   $result = mysqli_query($mysqli, "INSERT INTO tb_laporan 
-                                  (id, nama, nomor_identitas, tempat_tgl_lahir, jenis_kelamin, pekerjaan_or_jabatan, kewarganegaraan, alamat, peristiwa, tempat_kejadian, waktu, hari_tgl, terlapor, alamat_terlapor, saksi_1_nama, saksi_1_no_telp, saksi_2_nama, saksi_2_no_telp, bukti, status, jenis_laporan, asal_laporan) 
-                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'LAPORAN (B.1)', '$asal_laporan')");
+                                  (id, nama, nomor_identitas, tempat_tgl_lahir, jenis_kelamin, pekerjaan_or_jabatan, kewarganegaraan, alamat, peristiwa, tempat_kejadian, waktu, hari_tgl, terlapor, alamat_terlapor, saksi_1_nama, saksi_1_no_telp, saksi_2_nama, saksi_2_no_telp, bukti, status, jenis_laporan, asal_laporan_prov, asal_laporan_kabkota, asal_laporan_kec, asal_laporan_desa) 
+                               VALUES(null, '$nama', '$nomor_identitas', '$tempat_tgl_lahir', '$jenis_kelamin', '$pekerjaan_or_jabatan', '$kewarganegaraan', '$alamat', '$peristiwa', '$tempat_kejadian', '$waktu', '$hari_tgl', '$terlapor', '$alamat_terlapor', '$saksi_1_nama', '$saksi_1_no_telp', '$saksi_2_nama', '$saksi_2_no_telp', '$bukti', 'BELUM DIPROSES', 'LAPORAN (B.1)', '$asal_laporan_prov', '$asal_laporan_kabkota', '$asal_laporan_kec', '$asal_laporan_desa')");
   
 
 

@@ -14,6 +14,7 @@
                 <th>Peristiwa</th>
                 <th>Tanggal Dan Waktu</th>
                 <th>Pelapor</th>
+                <th>Asal Laporan</th>
                 <th>Jenis</th>
                 <th>Status</th>
                 <th>Action</th>
@@ -31,6 +32,12 @@
                 <td><?php echo $data['peristiwa']; ?></td>
                 <td><?php echo $data['hari_tgl']; ?> Jam <?php echo $data['waktu']; ?></td>
                 <td><?php echo $data['nama']; ?><br>No Identitas: <?php echo $data['nomor_identitas']; ?></td>
+                <td>
+                    <b>Prov:</b> <?php echo $data['asal_laporan_prov']; ?><br>
+                    <b>Kab/Kota:</b> <?php echo $data['asal_laporan_kabkota']; ?><br>
+                    <b>Kec:</b> <?php echo $data['asal_laporan_kec']; ?><br>
+                    <b>Desa/Kelurahan:</b> <?php echo $data['asal_laporan_desa']; ?><br>
+                </td>
                 <td><?php echo $data['jenis_laporan']; ?></td>
                 <td><?php echo $data['status']; ?></td>
                 <td>
@@ -47,6 +54,7 @@
                 <th>Peristiwa</th>
                 <th>Tanggal Dan Waktu</th>
                 <th>Pelapor</th>
+                <th>Asal Laporan</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
