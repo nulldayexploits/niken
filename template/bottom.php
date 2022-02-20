@@ -11,6 +11,18 @@
   
   <!-- My Script -->
   <script type="text/javascript" src="admin/js/script.js"></script>
+
+
+  <script type="text/javascript">
+    $('#induk').on('click', function(e){
+      if( $('#sub').attr('style') == 'display: none;'){  
+        $('#sub').attr('style', 'display: block;');
+      }else{
+        $('#sub').attr('style', 'display: none;');
+      }
+    });
+  </script>
+
 </body>
 
 </html>

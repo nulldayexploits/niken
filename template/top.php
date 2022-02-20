@@ -31,13 +31,28 @@
       </a>
       
       
-
-      <a href="lapor.php">
-        <li href="lapor.php" class="nav-link text-white">
-          <span class="mx-2">Pelaporan Dugaan <br><span style="padding-left:7px;">Pelanggaran Pemilu</span></span>
+      <a href="#" id="induk">
+        <li href="#" class="nav-link text-white">
+          <span class="mx-2">Pelanggaran Pemilu</span>
         </li>
       </a>
       
+      <span id="sub" style="display: none;">
+
+        <a href="lapor-kecurangan.php">
+          <li href="lapor-kecurangan.php" class="nav-link text-white">
+            <span class="mx-2"><span style="padding-left:10px;">- Laporan Masyarakat</span></span>
+          </li>
+        </a>
+
+        <a href="lapor-temuan.php">
+          <li href="lapor-temuan.php" class="nav-link text-white">
+            <span class="mx-2"><span style="padding-left:10px;">- Temuan Bawaslu</span></span>
+          </li>
+        </a>
+
+      </span>
+
       <a href="tracking-laporan.php">
         <li href="tracking-laporan.php" class="nav-link text-white">
           <span class="mx-2">Tracking Laporan</span>
@@ -63,3 +78,4 @@
       <a class="btn border-0" id="title"><h5>Layanan Pelaporan Kecurangan Pemilu</h5></a>
     </nav>
     <!--End Top Nav -->
+

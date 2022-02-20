@@ -62,7 +62,7 @@ if(isset($_POST['Submit'])) {
   // Memasukkan data kedatabase berdasarakan variabel tadi
   $result = mysqli_query($mysqli, "UPDATE tb_laporan 
                                     SET jenis_pelanggaran = '$jenis_pelanggaran',
-                                        status     = 'SELESAI DITETAPKAN: $jenis_pelanggaran'
+                                        status     = 'SELESAI DIPUTUSKAN: $jenis_pelanggaran'
                                     WHERE  id = '$id'");
   
  
